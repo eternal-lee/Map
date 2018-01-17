@@ -1,0 +1,99 @@
+*{margin:0;padding:0;}
+body, html{width: 100%;height:100%;}
+#box{
+	width:100%;
+	height:100%;
+	position:relative;
+}
+#map{
+	width: 100%;
+	height:90%;
+	overflow: hidden;
+	margin:0;
+	font-family:"微软雅黑";
+}
+.search{
+	position:absolute;
+	left:80px;
+	top:20px;
+	font-size:16px;
+	z-index:10;
+	background:#fff;
+	line-height:42px;
+}
+.search input[type=text]{
+	width:240px;
+	height:40px;
+	outline:none;
+	border:none;
+	padding:0 30px 0 6px;
+}
+.search input[type=button]{
+	width:50px;
+	height:44px;
+	background:#3385ff;
+	color:#fff;
+	outline:none;
+	border:none;
+	cursor:pointer;
+	margin:1px 0 0 -5px;
+}
+.search label{
+	position:relative;
+	display: inline-block;
+}
+.search .img{
+	width:30px;
+	height:42px;
+	position:absolute;
+	right:2px;
+	top:0;
+	cursor:pointer;
+	background:url(../img/searchbox_f175577.png) no-repeat 0 -110px;
+}
+.search label #addressList{
+	list-style:none;
+	z-index:10;
+	position:absolute;
+	left:0;
+	width:340px;
+	top:43px;
+}
+ul#addressList li{
+	padding:0 20px 0 42px;
+	background:rgba(204,204,204,.8) url(../img/searchbox_f175577.png) no-repeat 0 -73px;
+	cursor:pointer;
+	width:284px;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space:nowrap;
+}
+ul#addressList li:hover{
+	color:#fff;
+	background:#666 url(../img/searchbox_f175577.png) no-repeat 0 -73px;
+}
+@media only screen and (max-width: 468px) and (min-width:300px){
+	.search{
+		position: static;
+		display:flex;
+	}
+	.search label{
+		flex-grow:1;
+		display:flex;
+	}
+	.search label input[type=text]{
+		flex:1;
+		width:0;
+	}
+	.search input[type=button]{
+		margin:0;
+	}
+	.search label #addressList{
+		width:100%;
+		display:flex;
+		flex-direction:column;
+	}
+	.search label #addressList li{
+		width: 96%;
+	}
+}
