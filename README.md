@@ -4,6 +4,6 @@
 加入下面这段代码：
 <pre>
  ```html
-   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+   < meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
 ```
 </pre>  
